@@ -13,8 +13,8 @@ class TaskSeeder extends Seeder
     public function run()
     {
         factory(Task::class, 200)
-         -> create();
-         -> each(function($stas){
+         -> create()
+         -> each(function($tas){
            $emps = Employee::inRandomOrder()
             ->take(rand(5, 10))
             ->get();
