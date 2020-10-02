@@ -1,12 +1,16 @@
+@extends('layouts.main-layout');
 @section('section')
-  <div class="">
+  <div class="flex">
     <ul>
-      @foreach ($emps as $emp)
         <li>
+          <h4>Date of Birth:</h4>
           {{ $emp -> date_of_birth }}
+        </li>
+        <br>
+        <li>
+          <h4>Private Code:</h4>
           {{ $emp -> private_code }}
         </li>
-      @endforeach
     </ul>
   </div>
 @endsection

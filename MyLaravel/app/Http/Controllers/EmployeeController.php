@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Employee;
+use App\Location;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -12,6 +13,10 @@ class EmployeeController extends Controller
     }
     public function show($id){
       $emp = Employee::findOrFail($id);
-      return view('show', compact('emp'));
+      return view('layouts.show', compact('emp'));
+    }
+    public function create(){
+      $user = Location::all();
+      return view('layouts.create', compact('user'));
     }
 }
