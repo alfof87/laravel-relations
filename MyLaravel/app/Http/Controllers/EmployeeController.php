@@ -16,7 +16,7 @@ class EmployeeController extends Controller
       return view('layouts.show', compact('emp'));
     }
     public function create(){
-      $user = Location::all();
-      return view('layouts.create', compact('user'));
+      $locs = Location::all();
+      return view('layouts.create', compact('locs'));
     }
 }

@@ -1,7 +1,9 @@
 @extends('layouts.main-layout');
 @section('section')
   <div class="flex">
-    <form method="post">
+    <form>
+      @csrf
+      @method('POST')
       <div class="">
         <label for="firstname">Firstname:</label>
         <br>
@@ -25,8 +27,14 @@
       <div class="">
         <label for="location">Location:</label>
         <br>
-        <input type="text" name="location" value="">
+        <select class="" name="">
+          @foreach ($locs as $loc)
+            <option value="">{{ $loc -> name }}</option>
+          @endforeach
+        </select>
       </div>
+      <br>
+      <button type="submit" name="button">SALVA</button>
     </form>
   </div>
 @endsection
