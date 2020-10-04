@@ -27,3 +27,12 @@ a {
   color: black;
 }
 
+img {
+  width: 90px;
+  height: 100px;
+}
+
+li {
+  list-style-type: none;
+}
+
