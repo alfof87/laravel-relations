@@ -1,7 +1,7 @@
 @extends('layouts.main-layout');
 @section('section')
   <div class="flex">
-    <form>
+    <form action="{{ route('emp.store') }}" method="post">
       @csrf
       @method('POST')
       <div class="">
@@ -27,9 +27,9 @@
       <div class="">
         <label for="location">Location:</label>
         <br>
-        <select class="" name="">
+        <select class="" name="location_id">
           @foreach ($locs as $loc)
-            <option value="">{{ $loc -> name }}</option>
+            <option value="{{ $loc -> id }}">{{ $loc -> name }}</option>
           @endforeach
         </select>
       </div>

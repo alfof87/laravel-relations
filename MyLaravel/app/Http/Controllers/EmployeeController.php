@@ -18,5 +18,16 @@ class EmployeeController extends Controller
     public function create(){
       $locs = Location::all();
       return view('layouts.create', compact('locs'));
+      // return view('layouts.create', compact('emp'));
+    }
+    public function store(Request $request){
+      $data = $request -> all();
+      Employee::create($data);
+      return redirect() -> route('emp.index');
+    }
+    public function destroy($id){
+      $emp = Employee::findOrFail($id);
+      $emp -> delete();
+      return redirect() -> route('emp.index');
     }
 }

@@ -13,3 +13,17 @@ body {
   justify-content: center;
 }
 
+h1,
+h3 {
+  text-align: center;
+}
+
+#x {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
